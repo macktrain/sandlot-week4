@@ -23,7 +23,7 @@ function buildHTML(x)
     
 /* This allows the coming soon image to be displayed via css comingSoon class */
     html += "       <div id='questionNum'>";
-    html += "           " +   json.questions[x].qNum;
+    html += "           " +   json.questions[x].question;
     html += "       </div>";
     for (var i=0; i< json.questions[x].possibleAnswers.length; i++)
     {

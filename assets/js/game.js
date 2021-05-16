@@ -27,7 +27,6 @@ function countDown()
         questionNumber++;
         //New Question Presented
         newQuestion();
-        questionBlockEl.innerHTML = timerCount + " % 5 = " + (timerCount%5);
     }
     timeLeftEl.innerHTML = timerCount--;
 }
@@ -35,12 +34,13 @@ function countDown()
 
 startBtn.addEventListener("click", function()
 {
+    startBtn.style.display = "none";
     timerVar = setInterval(countDown, 1000);
 });
 
 function newQuestion()
 {
-    var randomQuestion = Math.floor(Math.random() * questionsTotal);
+    var randomQuestion = Math.floor(Math.random() * questionsTotalArr.length);
     //tracks which questions were already selected
     questionsTotalArr.splice(randomQuestion);
 

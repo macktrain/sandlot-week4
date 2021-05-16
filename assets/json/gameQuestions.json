@@ -12,7 +12,7 @@
                 },
                 {
                     "letter" : "B",
-                    "answer" : "<script> tag"
+                    "answer" : "&lt script &gt tag"
                 },
                 {
                     "letter" : "C",
@@ -32,15 +32,15 @@
             [
                 {
                     "letter" : "A",
-                    "answer" : "<javascript>"
+                    "answer" : "&lt javascript &gt"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "<scripting>"
+                    "answer" : "&lt scripting &gt"
                 },
                 {
                     "letter" : "C",
-                    "answer" : "<script>"
+                    "answer" : "&lt script &gt"
                 },
                 {
                     "letter" : "D",
@@ -216,19 +216,19 @@
             [
                 {
                     "letter" : "A",
-                    "answer" : "<link rel='stylesheet' href='styles.js'>"
+                    "answer" : "&lt link rel='stylesheet' href='styles.js' &gt"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "<link rel='stylesheet' href='styles.css'>"
+                    "answer" : "&lt link rel='stylesheet' href='styles.css' &gt"
                 },
                 {
                     "letter" : "C",
-                    "answer" : "<link rel:'stylesheet' href:'styles.css'>"
+                    "answer" : "&lt link rel:'stylesheet' href:'styles.css' &gt"
                 },
                 {
                     "letter" : "D",
-                    "answer" : "<script src='styles.js'></script>"
+                    "answer" : "&lt script src='styles.js'&gt &lt /script &gt"
                 }
             ],
             "correctAnswerLetter": "B"
@@ -288,19 +288,19 @@
             [
                 {
                     "letter" : "A",
-                    "answer" : "<header>"
+                    "answer" : "&lt header &gt"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "<div>"
+                    "answer" : "&lt div &gt"
                 },
                 {
                     "letter" : "C",
-                    "answer" : "<link>"
+                    "answer" : "&lt link &gt"
                 },
                 {
                     "letter" : "D",
-                    "answer" : "<below>"
+                    "answer" : "&lt below &gt"
                 }
             ],
             "correctAnswerLetter": "A"
