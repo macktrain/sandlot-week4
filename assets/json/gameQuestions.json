@@ -1,0 +1,357 @@
+{  
+    "questions": 
+    [
+        {
+            "qNum": 1,
+            "question": "What is the only JavaScript operator that takes three operands?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "Assignment Operator"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "<script> tag"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "If-Then-Else"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "Ternary"
+                }
+            ],
+            "correctAnswerLetter": "D"
+        },
+        {
+            "qNum": 2,
+            "question": "In which element do you place javascript?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "<javascript>"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "<scripting>"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "<script>"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "None of the above"
+                }
+            ],
+            "correctAnswerLetter": "C"
+        },
+        {
+            "qNum": 3,
+            "question": "What type of data does a boolean variable hold?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "True of False"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "Integers"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "HTML"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "Characters"
+                }
+            ],
+            "correctAnswerLetter": "A"
+        },
+        {
+            "qNum": 4,
+            "question": "Which method is used to concatenate two strings?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "concatenate()"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "concat()"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "place()"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "add()"
+                }
+            ],
+            "correctAnswerLetter": "B"
+        },
+        {
+            "qNum": 5,
+            "question": "What does the Document Object Model allow you to traverse?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "Data values"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "Data Objects"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "HTML Elements"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "Mount St. Helens"
+                }
+            ],
+            "correctAnswerLetter": "C"
+        },
+        {
+            "qNum": 6,
+            "question": "Which event is triggered when the users clicks a keystroke?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "onclick"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "click"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "clickIt"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "All of the above"
+                }
+            ],
+            "correctAnswerLetter": "A"
+        },
+        {
+            "qNum": 7,
+            "question": "Javascript and Java are, essentially, the same thing.",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "True"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "False"
+                }
+            ],
+            "correctAnswerLetter": "B"
+        },
+        {
+            "qNum": 8,
+            "question": "What do 'x++' result in given x=8?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "10"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "9"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "8"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "7"
+                }
+            ],
+            "correctAnswerLetter": "C"
+        },
+        {
+            "qNum": 9,
+            "question": "Which is the correct syntax to display 'MackTrain' in an alert box using javaScript?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "prompt('MackTrain');"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "alertBox('MackTrain');"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "msgbox('MackTrain');"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "alert('MackTrain');"
+                }
+            ],
+            "correctAnswerLetter": "D"
+        },        
+        {
+            "qNum": 10,
+            "question": "Which is the proper syntax to link to an external style sheet called styles.css in html?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "<link rel='stylesheet' href='styles.js'>"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "<link rel='stylesheet' href='styles.css'>"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "<link rel:'stylesheet' href:'styles.css'>"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "<script src='styles.js'></script>"
+                }
+            ],
+            "correctAnswerLetter": "B"
+        },        
+        {
+            "qNum": 11,
+            "question": "What does it mean to access a file dynamically?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "You are able to define before the program executes which file is to be accessed."
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "Whenever you use that file, you connect to the intranet prior to verify whether there are more recent versions or not."
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "You can change all the variables that are used before accessing functions from that file."
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "The file to be accessed is determined at run-time."
+                }
+            ],
+            "correctAnswerLetter": "D"
+        },        
+        {
+            "qNum": 12,
+            "question": "What is the only JavaScript operator that takes three operands?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "If-Then-Else"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "If-Then-Else"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "If-Then-Else"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "If-Then-Else"
+                }
+            ],
+            "correctAnswerLetter": "D"
+        },        
+        {
+            "qNum": 13,
+            "question": "Which html is used when coding semantically (not including React.js)?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "<header>"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "<div>"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "<link>"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "<below>"
+                }
+            ],
+            "correctAnswerLetter": "A"
+        },        
+        {
+            "qNum": 14,
+            "question": "Which example is the proper syntax for a button eventlistener to execute a function displayDate?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "document.getElementById('myBtn').addEventListener('click', displayDate);"
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "var $myBtn = document.getElementById('myBtn');<br>$myBtn.addEventListener('click', displayDate);"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "document.getElementById('myBtn').addEventListener('click', function() {displayDate();});"
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "All of the above"
+                }
+            ],
+            "correctAnswerLetter": "D"
+        },        
+        {
+            "qNum": 15,
+            "question": "What is a binary search?",
+            "possibleAnswers": 
+            [
+                {
+                    "letter" : "A",
+                    "answer" : "Searches are randomly picked until the proper item is found."
+                },
+                {
+                    "letter" : "B",
+                    "answer" : "Search a sorted array by repeatedly dividing the search interval in half until the search criteria are met"
+                },
+                {
+                    "letter" : "C",
+                    "answer" : "Start by searching item 0 through the end until the search criteria are met."
+                },
+                {
+                    "letter" : "D",
+                    "answer" : "None of the above"
+                }
+            ],
+            "correctAnswerLetter": "B"
+        }
+    ]
+}
