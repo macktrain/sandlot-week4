@@ -2,7 +2,7 @@
     When using gameQuestions.json note newQuestion() variable questionsTotal MUST 
     be equal to the number of question in gameQuestions.json.  
     CURRENTLY there are 15 questions (1, not 0, referenced) in the json */
-var url = "https://macktrain.github.io/sandlot-week2/assets/json/gameQuestions.json";
+var url = "https://macktrain.github.io/sandlot-week4/assets/json/gameQuestions.json";
 var xhro = new XMLHttpRequest();
 var json = "";
 
