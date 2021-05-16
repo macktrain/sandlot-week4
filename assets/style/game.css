@@ -1,0 +1,15 @@
+:root 
+{
+    /* global constants */
+}
+body 
+{
+    background-color: white;
+}
+
+#container
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
