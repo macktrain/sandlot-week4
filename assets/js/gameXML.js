@@ -41,6 +41,5 @@ function buildHTML(x)
         html += "</button>";
     }
 
-    alert (html);
     document.getElementById("questionBlock").innerHTML = html;
 }

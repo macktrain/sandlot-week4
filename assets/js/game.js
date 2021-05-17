@@ -3,7 +3,9 @@ var timeLeftEl = document.getElementById("timeLeft");
 var questionBlockEl = document.getElementById("questionBlock");
 //needed these to be global
 var timerCount = 60;
-var timerVar;
+var answerTimer = 10;
+var questionTimer = "";
+var first = true;
 //This counter is a counter outside of the broader timerCount
 var questionCtDown = 0;
 var questionNumber = 0;
@@ -22,12 +24,7 @@ function countDown()
         clearInterval(timerVar);
         //What takes place at end goes here.
     }
-    if (timerCount%10 == 0)
-    {
-        questionNumber++;
-        //New Question Presented
-        newQuestion();
-    }
+
     timeLeftEl.innerHTML = timerCount--;
 }
 
@@ -58,8 +55,17 @@ function wrongAnswer()
 startBtn.addEventListener("click", function()
 {
     startBtn.style.display = "none";
-    timerVar = setInterval(countDown, 1000);
+    questionCountDown();
+    var gameTimer = setInterval(countDown, 1000);
+    
 });
+
+
+function questionCountDown ()
+{
+    newQuestion();
+    questionTimer = setInterval(newQuestion,10000)
+}
 
 /************************************/
 /*   Dynamic button event listener  */
@@ -67,11 +73,14 @@ function checkAnswer(answerGiven, correct, verbose)
 {  
     if (answerGiven.trim() != correct.trim())
     {
-        document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect.</p>";
+        document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect. BYE BYE 10 seconds!!</p>";
+        timerCount = timerCount-10;
     }
     else
     {
         document.getElementById("gameTimeComments").innerHTML = "<p>GREAT JOB!  " + correct +" is correct!</p>";
+        //slight delay to allow the last message to show
+        clearInterval(questionTimer);
+        setTimeout(questionCountDown, 500);
     }
-    
 }
