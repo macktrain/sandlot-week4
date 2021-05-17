@@ -58,15 +58,15 @@ function newQuestion()
     totalQuestions++;
     var randomQuestion = Math.floor(Math.random() * questionsTotalArr.length);
     
+    //Build out the question in the html.  We want the value from the array so we
+    //avoid repeating questions.
+    buildHTML(questionsTotalArr[randomQuestion]);
     //Leave these commented alerts for future test verification
     /*alert("random #: " + randomQuestion + " length of array: "+ questionsTotalArr.length);
     alert(questionsTotalArr.join('\n'));*/
     questionsTotalArr.splice(randomQuestion,1);
     /*alert("random #: " + randomQuestion + " length of array: "+ questionsTotalArr.length);
     alert(questionsTotalArr.join('\n'));*/
-
-    //Build out the question in the html
-    buildHTML(randomQuestion)
 }
 
 function wrongAnswer()

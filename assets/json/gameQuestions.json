@@ -187,27 +187,19 @@
         },
         {
             "qNum": 9,
-            "question": "Which is the correct syntax to display 'MackTrain' in an alert box using javaScript?",
+            "question": "Javascript is an OO language?",
             "possibleAnswers": 
             [
                 {
                     "letter" : "A",
-                    "answer" : "prompt('MackTrain')"
+                    "answer" : "True"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "alertBox('MackTrain')"
-                },
-                {
-                    "letter" : "C",
-                    "answer" : "msgbox('MackTrain')"
-                },
-                {
-                    "letter" : "D",
-                    "answer" : "alert('MackTrain')"
+                    "answer" : "False"
                 }
             ],
-            "correctAnswerLetter": "D"
+            "correctAnswerLetter": "A"
         },        
         {
             "qNum": 10,
