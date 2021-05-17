@@ -1,4 +1,8 @@
 var startBtn = document.getElementById("startBtn");
+var answerA = document.getElementById("answerA");
+var answerB = document.getElementById("answerB");
+var answerC = document.getElementById("answerC");
+var answerD = document.getElementById("answerD");
 var timeLeftEl = document.getElementById("timeLeft");
 var questionBlockEl = document.getElementById("questionBlock");
 //needed these to be global
@@ -10,7 +14,7 @@ var questionNumber = 0;
 //QuestionsTotal must match #questions in gameQuestions.json
 //!!!!IMPORTANT!!!! SEE comments in lines 1-4 of gameXML.js before 
 //changing this array. These are the questions available:
-var questionsTotalArrOriginal = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var questionsTotalArrOriginal = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 //Keep copy of original so we can reset if necessary. This array will be 
 //manipulated to keep track of previously asked questions.
 var questionsTotalArr = questionsTotalArrOriginal;
@@ -31,19 +35,18 @@ function countDown()
     timeLeftEl.innerHTML = timerCount--;
 }
 
-
-startBtn.addEventListener("click", function()
-{
-    startBtn.style.display = "none";
-    timerVar = setInterval(countDown, 1000);
-});
-
 function newQuestion()
-{
+{   
     var randomQuestion = Math.floor(Math.random() * questionsTotalArr.length);
-    //tracks which questions were already selected
-    questionsTotalArr.splice(randomQuestion);
+    
+    //Leave these commented alerts for future test verification
+    /*alert("random #: " + randomQuestion + " length of array: "+ questionsTotalArr.length);
+    alert(questionsTotalArr.join('\n'));*/
+    questionsTotalArr.splice(randomQuestion,1);
+    /*alert("random #: " + randomQuestion + " length of array: "+ questionsTotalArr.length);
+    alert(questionsTotalArr.join('\n'));*/
 
+    //Build out the question in the html
     buildHTML(randomQuestion)
 }
 
@@ -51,3 +54,45 @@ function wrongAnswer()
 {
     timerCount = timerCount-10;
 }
+
+/************************************/
+/*          EVENT LISTENERS         */
+/************************************/
+/*  Start button event listener     */
+startBtn.addEventListener("click", function()
+{
+    startBtn.style.display = "none";
+    timerVar = setInterval(countDown, 1000);
+});
+
+/************************************/
+/* Answer "A" button event listener */
+answerA.addEventListener("click", function()
+{
+    //Check answerA
+    alert ("A selected");
+});
+
+/************************************/
+/* Answer "B" button event listener */
+answerB.addEventListener("click", function()
+{
+    //Check answerB
+    alert ("B selected");
+});
+
+/************************************/
+/* Answer "C" button event listener */
+answerC.addEventListener("click", function()
+{
+    //Check answerC
+    alert ("C selected");
+});
+
+/************************************/
+/* Answer "D" button event listener */
+answerD.addEventListener("click", function()
+{
+    //Check answerD
+    alert ("D selected");
+});

@@ -259,24 +259,24 @@
         },        
         {
             "qNum": 12,
-            "question": "What is the only JavaScript operator that takes three operands?",
+            "question": "In which situation do you place css styling directly in the html?",
             "possibleAnswers": 
             [
                 {
                     "letter" : "A",
-                    "answer" : "If-Then-Else"
+                    "answer" : "When 'I' is before 'E' except after 'C'."
                 },
                 {
                     "letter" : "B",
-                    "answer" : "If-Then-Else"
+                    "answer" : "When not using ternary operators."
                 },
                 {
                     "letter" : "C",
-                    "answer" : "If-Then-Else"
+                    "answer" : "Only when you're in a rush."
                 },
                 {
                     "letter" : "D",
-                    "answer" : "If-Then-Else"
+                    "answer" : "Never."
                 }
             ],
             "correctAnswerLetter": "D"

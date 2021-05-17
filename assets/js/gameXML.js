@@ -22,14 +22,14 @@ function buildHTML(x)
     var html = "";
     
 /* This allows the coming soon image to be displayed via css comingSoon class */
-    html += "       <div id='questionNum'>";
-    html += "           " +   json.questions[x].question;
-    html += "       </div>";
+    html += "<div id='questionNum'>";
+    html += "   <p>" + json.questions[x].question + "</p>";
+    html += "</div>";
     for (var i=0; i< json.questions[x].possibleAnswers.length; i++)
-    {
-        html += "       <div class='possibleAnswer'>";
-        html += "           " +   json.questions[x].possibleAnswers[i].letter + ".  " + json.questions[x].possibleAnswers[i].answer; 
-        html += "       </div>";
+    {                       
+        html += "<button class='possibleAnswer' value='answer"+   json.questions[x].possibleAnswers[i].letter +"' id='answer"+   json.questions[x].possibleAnswers[i].letter +"'>";
+        html += json.questions[x].possibleAnswers[i].letter + ".  " + json.questions[x].possibleAnswers[i].answer; 
+        html += "</button>";
     }
 
     document.getElementById("questionBlock").innerHTML = html;
