@@ -20,7 +20,7 @@
                 },
                 {
                     "letter" : "D",
-                    "answer" : "Ternary"
+                    "answer" : "Ternary Operator"
                 }
             ],
             "correctAnswerLetter": "D"
@@ -80,19 +80,19 @@
             [
                 {
                     "letter" : "A",
-                    "answer" : "concatenate()"
+                    "answer" : "concatenate"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "concat()"
+                    "answer" : "concat"
                 },
                 {
                     "letter" : "C",
-                    "answer" : "place()"
+                    "answer" : "place"
                 },
                 {
                     "letter" : "D",
-                    "answer" : "add()"
+                    "answer" : "add"
                 }
             ],
             "correctAnswerLetter": "B"
@@ -231,7 +231,7 @@
                     "answer" : "None of the above."
                 }
             ],
-            "correctAnswerLetter": "B"
+            "correctAnswerLetter": "A"
         },        
         {
             "qNum": 11,
@@ -252,7 +252,7 @@
                 },
                 {
                     "letter" : "D",
-                    "answer" : "The file to be accessed is determined at run-time."
+                    "answer" : "The file itself is determined at run-time."
                 }
             ],
             "correctAnswerLetter": "D"
@@ -307,27 +307,27 @@
         },        
         {
             "qNum": 14,
-            "question": "Which example is the proper syntax for a button eventlistener to execute a function displayDate?",
+            "question": "What answer is most correc for what an event listener does?",
             "possibleAnswers": 
             [
                 {
                     "letter" : "A",
-                    "answer" : "document.getElementById('myBtn').addEventListener('click', displayDate);"
+                    "answer" : "When a button is clicked it kicks off a function."
                 },
                 {
                     "letter" : "B",
-                    "answer" : "var $myBtn = document.getElementById('myBtn');<br>$myBtn.addEventListener('click', displayDate);"
+                    "answer" : "They allow you to manage global variables more effectively."
                 },
                 {
                     "letter" : "C",
-                    "answer" : "document.getElementById('myBtn').addEventListener('click', function() {displayDate();});"
+                    "answer" : "They perform an action when the specific event they are listening for occurs."
                 },
                 {
                     "letter" : "D",
-                    "answer" : "All of the above"
+                    "answer" : "None of the above"
                 }
             ],
-            "correctAnswerLetter": "D"
+            "correctAnswerLetter": "C"
         },        
         {
             "qNum": 15,
