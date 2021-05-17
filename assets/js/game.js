@@ -35,7 +35,7 @@ function countDown()
         
         var html = "";
         html += "<div id='results'>";
-        html += "<div><p>Out of "+ totalQuestions +", your results were that:!</p></div>";
+        html += "<div><p>Out of "+ totalQuestions +", your results were:</p></div>";
         html += "<div><p>You answered "+ rightAnswers +" correctly!</p></div>";
         html += "<div><p>You answered "+ wrongAnswers +" incorrectly!</p></div>";
         document.getElementById("questionBlock").innerHTML = html;
