@@ -32,7 +32,6 @@ function countDown()
         clearInterval(gameTimer);
         clearInterval(questionTimer);
         timeLeftEl.innerHTML = 0;
-        document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
         //You NEVER get to answer the last question.
         totalQuestions--;
         
@@ -42,12 +41,21 @@ function countDown()
         html += "<div><p>You answered "+ rightAnswers +" correctly!</p></div>";
         html += "<div><p>You answered "+ wrongAnswers +" incorrectly!</p></div>";
         document.getElementById("questionBlock").innerHTML = html;
+
+
+        document.getElementById("gameTimeComments").innerHTML = "<p>Your final score was " + getGrade() + "%!</p>";
     }
     else
     {
         timerCount--;
         timeLeftEl.innerHTML = timerCount;
     }
+}
+
+function getGrade()
+{
+    var score = 100*((rightAnswers/totalQuestions).toFixed(2));
+    return (score);
 }
 
 function questionCountDown ()
