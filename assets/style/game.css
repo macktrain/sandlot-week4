@@ -5,9 +5,14 @@
 
 body 
 {
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     display: flex;
     justify-content: center;
+
+    
+    font-size: 1em !important;
+    color: rgb(26, 26, 26) !important;
+    font-family: Arial !important;
 }
 
 #container
@@ -37,6 +42,11 @@ body
     flex-direction: column;
     align-items: flex-start;
     justify-items: flex-start;
+}
+
+#startUpBlock h1
+{
+    text-align: center;
 }
 
 #questionBlock button {
