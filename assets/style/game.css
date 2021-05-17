@@ -24,6 +24,12 @@ body
     justify-items: flex-start;
 }
 
+#questionBlock button {
+    flex-grow: 1;
+    width: 0;
+    break-after: always;
+  }
+
 .possibleAnswer
 {
     min-width: 300px;

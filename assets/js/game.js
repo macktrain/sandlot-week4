@@ -9,6 +9,7 @@ var gameTimer = "";
 //setInterval for 10 sec question clock
 var questionTimer = "";
 var first = true;
+var answer = 2;
 //Right/wrong answer counters
 var rightAnswers = 0;
 var wrongAnswers = 0;
@@ -32,10 +33,12 @@ function countDown()
         clearInterval(questionTimer);
         timeLeftEl.innerHTML = 0;
         document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
+        //You NEVER get to answer the last question.
+        totalQuestions--;
         
         var html = "";
         html += "<div id='results'>";
-        html += "<div><p>Out of "+ totalQuestions +", your results were:</p></div>";
+        html += "<div><p>Out of "+ totalQuestions +" questions, your results were:</p></div>";
         html += "<div><p>You answered "+ rightAnswers +" correctly!</p></div>";
         html += "<div><p>You answered "+ wrongAnswers +" incorrectly!</p></div>";
         document.getElementById("questionBlock").innerHTML = html;
@@ -49,6 +52,14 @@ function countDown()
 
 function questionCountDown ()
 {
+    if (!first)
+    {
+        (answer === 2) ?  wrongAnswers++ : answer = 2
+    }
+    else
+    {
+        first=0;
+    } 
     newQuestion();
     questionTimer = setInterval(newQuestion,10000);
 }
@@ -93,6 +104,7 @@ function checkAnswer(answerGiven, correct, verbose)
     document.getElementById("gameTimeComments").innerHTML = "";
     if (answerGiven.trim() != correct.trim())
     {
+        answer = 1;
         document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect. BYE BYE 10 seconds!!</p>";
         wrongAnswer();
         clearInterval(questionTimer);
@@ -100,10 +112,11 @@ function checkAnswer(answerGiven, correct, verbose)
     }
     else
     {
+        answer = 0;
         document.getElementById("gameTimeComments").innerHTML = "<p>GREAT JOB!  " + correct +" is correct!</p>";
         //slight delay to allow the last message to show
-        clearInterval(questionTimer);
         rightAnswers++;
+        clearInterval(questionTimer);
         setTimeout(questionCountDown, 500);
     }
 }
