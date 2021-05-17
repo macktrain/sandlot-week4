@@ -27,10 +27,20 @@ function buildHTML(x)
     html += "</div>";
     for (var i=0; i< json.questions[x].possibleAnswers.length; i++)
     {                       
-        html += "<button class='possibleAnswer' value='answer"+   json.questions[x].possibleAnswers[i].letter +"' id='answer"+   json.questions[x].possibleAnswers[i].letter +"'>";
+        html += "<button class='possibleAnswer' value='answer"
+        +   json.questions[x].possibleAnswers[i].letter 
+        +"' onClick='checkAnswer(`"
+        //this is actual letter selected
+        + json.questions[x].possibleAnswers[i].letter + "`,`"
+        //this is the correct answer
+        + json.questions[x].correctAnswerLetter +"`, `"
+        //this is the correct verbose answer.
+        + json.questions[x].possibleAnswers[i].answer +"`)'>";
+
         html += json.questions[x].possibleAnswers[i].letter + ".  " + json.questions[x].possibleAnswers[i].answer; 
         html += "</button>";
     }
 
+    alert (html);
     document.getElementById("questionBlock").innerHTML = html;
 }

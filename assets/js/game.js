@@ -1,8 +1,4 @@
 var startBtn = document.getElementById("startBtn");
-var answerA = document.getElementById("answerA");
-var answerB = document.getElementById("answerB");
-var answerC = document.getElementById("answerC");
-var answerD = document.getElementById("answerD");
 var timeLeftEl = document.getElementById("timeLeft");
 var questionBlockEl = document.getElementById("questionBlock");
 //needed these to be global
@@ -66,33 +62,16 @@ startBtn.addEventListener("click", function()
 });
 
 /************************************/
-/* Answer "A" button event listener */
-answerA.addEventListener("click", function()
-{
-    //Check answerA
-    alert ("A selected");
-});
-
-/************************************/
-/* Answer "B" button event listener */
-answerB.addEventListener("click", function()
-{
-    //Check answerB
-    alert ("B selected");
-});
-
-/************************************/
-/* Answer "C" button event listener */
-answerC.addEventListener("click", function()
-{
-    //Check answerC
-    alert ("C selected");
-});
-
-/************************************/
-/* Answer "D" button event listener */
-answerD.addEventListener("click", function()
-{
-    //Check answerD
-    alert ("D selected");
-});
+/*   Dynamic button event listener  */
+function checkAnswer(answerGiven, correct, verbose)
+{  
+    if (answerGiven.trim() != correct.trim())
+    {
+        document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect.</p>";
+    }
+    else
+    {
+        document.getElementById("gameTimeComments").innerHTML = "<p>GREAT JOB!  " + correct +" is correct!</p>";
+    }
+    
+}
