@@ -25,11 +25,18 @@ function countDown()
     if (timerCount <= 0)
     {
         clearInterval(gameTimer);
-        //clearInterval(questionTimer);
+        clearInterval(questionTimer);
+        //document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
         //What takes place at end goes here.
     }
     timerCount--;
     timeLeftEl.innerHTML = timerCount;
+}
+
+function questionCountDown ()
+{
+    newQuestion();
+    questionTimer = setInterval(newQuestion,10000);
 }
 
 function newQuestion()
@@ -61,18 +68,7 @@ startBtn.addEventListener("click", function()
     startBtn.style.display = "none";
     questionCountDown();
     gameTimer = setInterval(countDown, 1000);
-    if (timerCount <= 0)
-    {
-        document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
-    }
 });
-
-
-function questionCountDown ()
-{
-    newQuestion();
-    questionTimer = setInterval(newQuestion,10000);
-}
 
 /************************************/
 /*   Dynamic button event listener  */
@@ -82,7 +78,7 @@ function checkAnswer(answerGiven, correct, verbose)
     if (answerGiven.trim() != correct.trim())
     {
         document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect. BYE BYE 10 seconds!!</p>";
-        timerCount = timerCount-10;
+        wrongAnswer();
     }
     else
     {

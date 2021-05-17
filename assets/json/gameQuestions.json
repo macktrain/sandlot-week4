@@ -12,7 +12,7 @@
                 },
                 {
                     "letter" : "B",
-                    "answer" : "&lt script &gt tag"
+                    "answer" : "script tag"
                 },
                 {
                     "letter" : "C",
@@ -32,15 +32,15 @@
             [
                 {
                     "letter" : "A",
-                    "answer" : "&lt javascript &gt"
+                    "answer" : "javascript tag"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "&lt scripting &gt"
+                    "answer" : "scripting tag"
                 },
                 {
                     "letter" : "C",
-                    "answer" : "&lt script &gt"
+                    "answer" : "script tag"
                 },
                 {
                     "letter" : "D",
@@ -211,24 +211,24 @@
         },        
         {
             "qNum": 10,
-            "question": "Which is the proper syntax to link to an external style sheet called styles.css in html?",
+            "question": "What type of data structure is enclosed with curly braces ({})?",
             "possibleAnswers": 
             [
                 {
                     "letter" : "A",
-                    "answer" : "&lt link rel='stylesheet' href='styles.js' &gt"
+                    "answer" : "An object."
                 },
                 {
                     "letter" : "B",
-                    "answer" : "&lt link rel='stylesheet' href='styles.css' &gt"
+                    "answer" : "A variable."
                 },
                 {
                     "letter" : "C",
-                    "answer" : "&lt link rel:'stylesheet' href:'styles.css' &gt"
+                    "answer" : "An array."
                 },
                 {
                     "letter" : "D",
-                    "answer" : "&lt script src='styles.js'&gt &lt /script &gt"
+                    "answer" : "None of the above."
                 }
             ],
             "correctAnswerLetter": "B"
@@ -283,24 +283,24 @@
         },        
         {
             "qNum": 13,
-            "question": "Which html is used when coding semantically (not including React.js)?",
+            "question": "Which html element is used when coding semantically (not including React.js)?",
             "possibleAnswers": 
             [
                 {
                     "letter" : "A",
-                    "answer" : "&lt header &gt"
+                    "answer" : "header element."
                 },
                 {
                     "letter" : "B",
-                    "answer" : "&lt div &gt"
+                    "answer" : "div element."
                 },
                 {
                     "letter" : "C",
-                    "answer" : "&lt link &gt"
+                    "answer" : "link element."
                 },
                 {
                     "letter" : "D",
-                    "answer" : "&lt below &gt"
+                    "answer" : "below element."
                 }
             ],
             "correctAnswerLetter": "A"
