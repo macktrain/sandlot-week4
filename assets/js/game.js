@@ -4,6 +4,9 @@ var questionBlockEl = document.getElementById("questionBlock");
 //needed these to be global
 var timerCount = 60;
 var answerTimer = 10;
+//setInterval for 60 sec gatclock
+var gameTimer = "";
+//setInterval for 10 sec question clock
 var questionTimer = "";
 var first = true;
 //This counter is a counter outside of the broader timerCount
@@ -19,13 +22,14 @@ var questionsTotalArr = questionsTotalArrOriginal;
 
 function countDown() 
 {   
-    if (timerCount === 0)
+    if (timerCount <= 0)
     {
-        clearInterval(timerVar);
+        clearInterval(gameTimer);
+        //clearInterval(questionTimer);
         //What takes place at end goes here.
     }
-
-    timeLeftEl.innerHTML = timerCount--;
+    timerCount--;
+    timeLeftEl.innerHTML = timerCount;
 }
 
 function newQuestion()
@@ -56,21 +60,25 @@ startBtn.addEventListener("click", function()
 {
     startBtn.style.display = "none";
     questionCountDown();
-    var gameTimer = setInterval(countDown, 1000);
-    
+    gameTimer = setInterval(countDown, 1000);
+    if (timerCount <= 0)
+    {
+        document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
+    }
 });
 
 
 function questionCountDown ()
 {
     newQuestion();
-    questionTimer = setInterval(newQuestion,10000)
+    questionTimer = setInterval(newQuestion,10000);
 }
 
 /************************************/
 /*   Dynamic button event listener  */
 function checkAnswer(answerGiven, correct, verbose)
 {  
+    document.getElementById("gameTimeComments").innerHTML = "";
     if (answerGiven.trim() != correct.trim())
     {
         document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect. BYE BYE 10 seconds!!</p>";

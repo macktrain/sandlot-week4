@@ -192,19 +192,19 @@
             [
                 {
                     "letter" : "A",
-                    "answer" : "prompt('MackTrain');"
+                    "answer" : "prompt('MackTrain')"
                 },
                 {
                     "letter" : "B",
-                    "answer" : "alertBox('MackTrain');"
+                    "answer" : "alertBox('MackTrain')"
                 },
                 {
                     "letter" : "C",
-                    "answer" : "msgbox('MackTrain');"
+                    "answer" : "msgbox('MackTrain')"
                 },
                 {
                     "letter" : "D",
-                    "answer" : "alert('MackTrain');"
+                    "answer" : "alert('MackTrain')"
                 }
             ],
             "correctAnswerLetter": "D"
