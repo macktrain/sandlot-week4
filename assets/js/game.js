@@ -9,6 +9,10 @@ var gameTimer = "";
 //setInterval for 10 sec question clock
 var questionTimer = "";
 var first = true;
+//Right/wrong answer counters
+var rightAnswers = 0;
+var wrongAnswers = 0;
+var totalQuestions = 0;
 //This counter is a counter outside of the broader timerCount
 var questionCtDown = 0;
 var questionNumber = 0;
@@ -26,11 +30,21 @@ function countDown()
     {
         clearInterval(gameTimer);
         clearInterval(questionTimer);
-        //document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
-        //What takes place at end goes here.
+        timeLeftEl.innerHTML = 0;
+        document.getElementById("gameTimeComments").innerHTML = "<p>GAME OVER!!</p>";
+        
+        var html = "";
+        html += "<div id='results'>";
+        html += "<div><p>Out of "+ totalQuestions +", your results were that:!</p></div>";
+        html += "<div><p>You answered "+ rightAnswers +" correctly!</p></div>";
+        html += "<div><p>You answered "+ wrongAnswers +" incorrectly!</p></div>";
+        document.getElementById("questionBlock").innerHTML = html;
     }
-    timerCount--;
-    timeLeftEl.innerHTML = timerCount;
+    else
+    {
+        timerCount--;
+        timeLeftEl.innerHTML = timerCount;
+    }
 }
 
 function questionCountDown ()
@@ -41,6 +55,7 @@ function questionCountDown ()
 
 function newQuestion()
 {   
+    totalQuestions++;
     var randomQuestion = Math.floor(Math.random() * questionsTotalArr.length);
     
     //Leave these commented alerts for future test verification
@@ -57,6 +72,7 @@ function newQuestion()
 function wrongAnswer()
 {
     timerCount = timerCount-10;
+    wrongAnswers++;
 }
 
 /************************************/
@@ -79,12 +95,15 @@ function checkAnswer(answerGiven, correct, verbose)
     {
         document.getElementById("gameTimeComments").innerHTML = "<p>" + answerGiven +" is incorrect. BYE BYE 10 seconds!!</p>";
         wrongAnswer();
+        clearInterval(questionTimer);
+        setTimeout(questionCountDown, 500);
     }
     else
     {
         document.getElementById("gameTimeComments").innerHTML = "<p>GREAT JOB!  " + correct +" is correct!</p>";
         //slight delay to allow the last message to show
         clearInterval(questionTimer);
+        rightAnswers++;
         setTimeout(questionCountDown, 500);
     }
 }
